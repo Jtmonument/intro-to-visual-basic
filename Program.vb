@@ -2,18 +2,14 @@ Imports System
 
 Module Program
     Sub Main(args As String())
-        Dim finalGrade As String = "B"
-        Select Case finalGrade
-            Case "A"
-                Console.WriteLine("4.0 GPA")
-            Case "B"
-                Console.WriteLine("3.0 GPA")
-            Case "C"
-                Console.WriteLine("2.0 GPA")
-            Case "D"
-                Console.WriteLine("1.0 GPA")
-            Case Else
-                Console.WriteLine("0.0 GPA")
-        End Select
+        Dim factorial As Integer = 1
+        For i = 1 To 5
+            factorial *= i
+        Next
+        Console.WriteLine(factorial)
+
+        For i = 0 To 10 Step 2
+            Console.WriteLine(i)
+        Next
     End Sub
 End Module
