@@ -2,10 +2,8 @@ Imports System
 
 Module Program
     Sub Main(args As String())
-        Dim a As Integer
-        a = 5
-        Dim b As Integer = 3
-        Console.WriteLine(a \ b) ' \ integer division
-        Console.WriteLine(a / b) ' / float division
+        Dim number As Integer = 5
+        Dim parsed As String = "This watermelon costs " & number.ToString("C")
+        Console.WriteLine(parsed)
     End Sub
 End Module
