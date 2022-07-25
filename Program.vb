@@ -3,20 +3,25 @@ Imports System.IO
 
 Module Program
     Sub Main(args As String())
-        Dim abram As Human = New Human("Abram")
-        abram.Gender = Sex.MALE
-        Dim sarai As Human = New Human("Sarai")
-        sarai.Gender = Sex.FEMALE
-        Dim hagar As Human = New Human("Hagar")
-        sarai.Gender = Sex.FEMALE
-        Dim humans As List(Of Human) = New List(Of Human)
-        humans.Add(abram)
-        humans.Add(sarai)
-        humans.Add(hagar)
-        humans.Sort()
+        Dim list As New List(Of Integer)
+        list.Add(1)
+        list.Add(2)
+        list.Add(3)
+        printNumbers(list)
 
-        For i = 0 To humans.Count - 1
-            Console.WriteLine(humans(i))
+        Dim name As New String("Jonathan Taylor")
+        print(name)
+    End Sub
+
+    Sub print(dataStructure As IEnumerable)
+        For Each someData In dataStructure
+            Console.WriteLine(someData)
+        Next
+    End Sub
+
+    Sub printNumbers(numbers As IEnumerable(Of Integer))
+        For Each num In numbers
+            Console.WriteLine(num)
         Next
     End Sub
 End Module
