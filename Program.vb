@@ -3,12 +3,13 @@ Imports System.IO
 
 Module Program
     Sub Main(args As String())
-        Dim person As Person = New Person
-        Console.WriteLine(person)
-        person.MyName = "John"
-        Console.WriteLine(person)
-        Console.WriteLine(person.GetHash())
-        person = New Person("Jane")
-        Console.WriteLine(person)
+        Try
+            Dim num As String = "some text"
+            Convert.ToInt32(num)
+        Catch ex As Exception
+            Throw New Exception("Not able to parse! " & ex.Message)
+        Finally
+            Console.WriteLine("Program terminating...")
+        End Try
     End Sub
 End Module
