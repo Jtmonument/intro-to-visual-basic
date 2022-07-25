@@ -2,14 +2,20 @@ Imports System
 
 Module Program
     Sub Main(args As String())
-        Dim nArray(3, 3) As Integer ' Multi-dimensional Array
-        For i = 0 To 2
-            For j = 0 To 2
-                nArray(i, j) = j + 1
-                Console.WriteLine(nArray(i, j))
-            Next
-        Next
+        Dim nList As New List(Of Integer)
+        nList.Add(5)
+        Console.WriteLine(nList(0))
 
-        Dim nArray1(5)() As Integer ' Jagged Array
+        Dim nQueue As New Queue(Of Integer)
+        nQueue.Enqueue(1)
+        nQueue.Enqueue(2)
+        Console.WriteLine(nQueue.Dequeue)
+        Console.WriteLine(nQueue.Dequeue)
+
+        Dim nStack As New Stack(Of Integer)
+        nStack.Push(1)
+        nStack.Push(2)
+        Console.WriteLine(nStack.Pop)
+        Console.WriteLine(nStack.Pop)
     End Sub
 End Module
