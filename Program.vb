@@ -13,5 +13,8 @@ Module Program
         person.RemoveName()
         Console.WriteLine(New String("-", 9))
         Console.WriteLine(person.Name)
+
+        Dim person1 As Person = New Person("Jane", "Doe")
+        Console.WriteLine(person1.Name)
     End Sub
 End Module

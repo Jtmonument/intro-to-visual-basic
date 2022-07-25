@@ -1,6 +1,16 @@
 ﻿Public Class Person
     Private firstName As String
     Private lastName As String
+
+    Public Sub New()
+
+    End Sub
+
+    Public Sub New(firstName As String, lastName As String)
+        Me.firstName = firstName
+        Me.lastName = lastName
+    End Sub
+
     Public Property Name As String
         Get
             Return firstName & " " & lastName
