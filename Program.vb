@@ -2,41 +2,20 @@ Imports System
 
 Module Program
     Sub Main(args As String())
-        Do
-            Console.Write("Do you want to exit (Y/n): ")
-        Loop While Not Console.ReadLine().ToLower().Equals("y")
+        Dim name As String = "John Doe"
+        Console.WriteLine(Str(0))
+        Dim names As String() = name.Split(" ")
+        Console.WriteLine(names(1).ToUpper)
 
-        Console.WriteLine(New String("-", 5))
+        Dim now As DateTime = DateTime.Now
+        Console.WriteLine(String.Format("{0:d}", now))
+        Console.WriteLine(String.Format("{0:D}", now))
+        Console.WriteLine(String.Format("{0:M}", now))
+        Console.WriteLine(String.Format("{0:MM}", now))
+        Console.WriteLine(String.Format("{0:M/d/yyyy}", now))
+        Console.WriteLine(String.Format("{0:MM/dd/yyyy}", now))
+        Console.WriteLine(String.Format("{0:HH:mm:ss}", now))
 
-        Do
-            Console.Write("Do you want to exit (Y/n): ")
-        Loop Until Console.ReadLine().ToLower().Equals("y")
-
-        Console.WriteLine(New String("*", 5))
-
-        While True
-            Console.Write("Do you want to exit (Y/n): ")
-            If Console.ReadLine().ToLower().Equals("y") Then
-                Exit While
-            End If
-        End While
-
-        Console.WriteLine(New String("+", 5))
-
-        Do While True
-            Console.Write("Do you want to exit (Y/n): ")
-            If Console.ReadLine().ToLower().Equals("y") Then
-                Exit Do
-            End If
-        Loop
-
-        Console.WriteLine(New String("=", 5))
-
-        For i = 0 To 10
-            If i Mod 2 <> 0 Then
-                Continue For
-            End If
-            Console.WriteLine(i)
-        Next
+        Console.WriteLine(String.Format("{0:c}", 9D))
     End Sub
 End Module
