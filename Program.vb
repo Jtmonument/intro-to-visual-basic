@@ -2,19 +2,18 @@ Imports System
 
 Module Program
     Sub Main(args As String())
-        Dim person As Person = New Person
-        person.Name = "John Doe"
-        Console.WriteLine(person.Name)
-        Console.WriteLine(person.GetFirstName)
-        Console.WriteLine(person.GetLastName)
-        Dim copy As String = ""
-        person.SendNameByRef(copy)
-        Console.WriteLine(copy)
-        person.RemoveName()
-        Console.WriteLine(New String("-", 9))
-        Console.WriteLine(person.Name)
+        Dim nArray() As Integer
+        Dim nArray1(5) As Integer
+        Dim nArray2() As Integer = {1, 2, 3}
+        Dim nArray3() As Integer = New Integer(5) {}
+        nArray = New Integer(5) {}
+        Console.WriteLine(nArray(0))
+        Console.WriteLine(nArray2(1))
 
-        Dim person1 As Person = New Person("Jane", "Doe")
-        Console.WriteLine(person1.Name)
+        For i = 0 To nArray2.Length - 1
+            Console.WriteLine(nArray2(i))
+        Next
+        Dim str As String = "Hello"
+        Console.WriteLine(str(0))
     End Sub
 End Module
