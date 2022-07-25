@@ -3,13 +3,11 @@ Imports System.IO
 
 Module Program
     Sub Main(args As String())
-        Try
-            Dim num As String = "some text"
-            Convert.ToInt32(num)
-        Catch ex As Exception
-            Throw New Exception("Not able to parse! " & ex.Message)
-        Finally
-            Console.WriteLine("Program terminating...")
-        End Try
+        work(New BackEndDeveloper())
+        work(New FrontEndDeveloper())
+    End Sub
+
+    Sub work(employee As Employee)
+        employee.work()
     End Sub
 End Module
