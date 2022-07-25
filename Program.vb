@@ -7,7 +7,7 @@ Module Program
         work(New FrontEndDeveloper())
     End Sub
 
-    Sub work(employee As Employee)
+    Sub work(employee As Workable)
         employee.work()
     End Sub
 End Module

@@ -1,6 +1,6 @@
-﻿Public NotInheritable Class FrontEndDeveloper : Inherits Employee
+﻿Public NotInheritable Class FrontEndDeveloper : Implements Workable
 
-    Public Overrides Sub work()
+    Public Sub code() Implements Workable.work
         Console.WriteLine("Creating UI and reactive forms...")
     End Sub
 End Class
